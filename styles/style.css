@@ -1,0 +1,75 @@
+:root {
+    --background--color: #121214;
+    --base--color: 194;
+    --primary--color: hsl(var(--base--color), 100%, 63%);
+    --text--color: #FFF;
+    --background--primary--light: hsla(var(--base--color), 100%, 63%, 0.13);
+
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background--color);
+    color: var(--text--color);
+    min-height: 100vh;
+}
+
+main {
+    align-self: end;
+    justify-self: center;
+}
+
+#timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    display: flex;
+    margin-bottom: 1.6rem;
+}
+
+#controls {
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+    background-color: var(--background--primary--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    border-radius: 99999px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+    fill: var(--primary--color);
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    align-self: end;
+    justify-self: end;
+}
+
+footer button {
+    padding: 0 4rem 3.2rem 0;
+}
